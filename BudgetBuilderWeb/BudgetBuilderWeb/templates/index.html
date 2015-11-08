@@ -1,0 +1,111 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Budget Builder</title>
+    <meta name="BudgetBuilder" content="An interactive guide to your offer letters.">
+    <link rel="stylesheet" href="../static/content/style.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- generate html boxes for each company, plus a user entered option -->
+    <div class="container">
+        <div class="companyBoxContainer">
+            <h1>Select a company...</h1>
+
+            <a href="/location/apple">
+                <div class="companyBox">
+                    <div class="companyLogoDock">
+                        <img class="companyLogo" src="../static/content/img/Apple_logo_grey.png" alt="Apple Logo" />
+                    </div>
+                    <div class="companyName">
+                        <h2>Apple</h2>
+                    </div>
+                </div>
+            </a>
+            <a href="/location/google">
+                <div class="companyBox">
+                    <div class="companyLogoDock">
+                        <img class="companyLogo" src="../static/content/img/googlelogo_color_272x92dp.png" alt="Google Logo" />
+                    </div>
+                    <div class="companyName">
+                        <h2>Google</h2>
+                    </div>
+                </div>
+            </a>
+            <a href="/location/amazon">
+                <div class="companyBox">
+                    <div class="companyLogoDock">
+                        <img class="companyLogo" src="../static/content/img/Uiconstock-Socialmedia-Amazon.ico" alt="Amazon Logo" />
+                    </div>
+                    <div class="companyName">
+                        <h2>Amazon</h2>
+                    </div>
+                </div>
+            </a>
+            <a href="/location/Microsoft">
+                <div class="companyBox">
+                    <div class="companyLogoDock">
+                        <img class="companyLogo" src="../static/content/img/Microsoft-Icon-Logo-PNG-02536.png" alt="Microsoft Logo" />
+                    </div>
+                    <div class="companyName">
+                        <h2>Microsoft</h2>
+                    </div>
+                </div>
+            </a>
+            <a href="/location/Facebook">
+                <div class="companyBox">
+                    <div class="companyLogoDock">
+                        <img class="companyLogo" src="../static/content/img/F_icon.svg.png" alt="Facebook Logo" />
+                    </div>
+                    <div class="companyName">
+                        <h2>Facebook</h2>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="otherCompany">
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+            <!-- Modal -->
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Company Name</h4>
+
+                        </div>
+                        <div class="modal-body">
+                            <label class="label" for="base">Base Salary:</label>
+                            <br>
+                            <input type="text" name="base" class="input-large">
+                            <br>
+                            <label class="label" for="signing">Signing Bonus:</label>
+                            <br>
+                            <input type="text" name="signing" class="input-large">
+                            <br>
+                            <label class="label" for="equity">Equity:</label>
+                            <br>
+                            <input type="text" name="equity" class="input-large">
+                            </textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</html>
+
+{% endblock %}
